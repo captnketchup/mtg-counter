@@ -1,35 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import { GridElement } from "./components/GridElement";
 
 function App() {
-  const [count, setCount] = useState(0)
-  let valami: string = "asd"
-
-
-  const asd = [1, 2,3,4,5]
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className="text-4xl">Vite + React</h1>
-      
-      <li>
-        {asd.map((element)=>
-            <ul>{element}</ul>
-        )}
-      </li>
-      
-    </>
-  )
+    <div className="grid grid-rows-2 w-screen h-screen">
+      <GridElement count={0} orientation="down"/>
+      <GridElement count={0}/>
+    </div>
+  );
 }
 
-export default App
+export default App;
