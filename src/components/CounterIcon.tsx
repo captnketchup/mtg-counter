@@ -14,29 +14,14 @@ interface CounterIconProps {
   type: CounterType;
 }
 
-const iconStore = [
-  {
-    key: "black",
-    icon: <FaSkull />,
-  },
-  {
-    key: "white",
-    icon: <FaSun />,
-  },
-  {
-    key: "blue",
-    icon: <FaDroplet />,
-  },
-  {
-    key: "red",
-    icon: <FaFire />,
-  },
-  {
-    key: "green",
-    icon: <FaTree />,
-  },
-] as { key: CounterType; icon: ReactElement }[];
+const iconStore = {
+  black: <FaSkull />,
+  white: <FaSun />,
+  blue: <FaDroplet />,
+  red: <FaFire />,
+  green: <FaTree />,
+} satisfies { [key in CounterType]: ReactElement };
 
 function CounterIcon({ type }: CounterIconProps) {
-  return iconStore.find((icon) => icon.key === type) ?? <FaUssunnah />;
+  return iconStore[type];
 }

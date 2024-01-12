@@ -3,14 +3,7 @@ export type CounterType =
   | "white"
   | "green"
   | "blue"
-  | "red"
-  | "shock"
-  | "phyrexian"
-  | "star"
-  | "cloud"
-  | "shield"
-  | "sword"
-  | "mana";
+  | "red";
 
 export interface MagicCounter {
   counterId: number;
