@@ -1,30 +1,11 @@
 import { create } from "zustand";
+import { MagicCounter } from "./models/Counter";
 
 type Player = {
   id: number;
   health: number;
   counters: MagicCounter[];
 };
-
-type CounterType =
-  | "black"
-  | "white"
-  | "green"
-  | "blue"
-  | "red"
-  | "shock"
-  | "phyrexian"
-  | "star"
-  | "cloud"
-  | "shield"
-  | "sword"
-  | "mana";
-
-interface MagicCounter {
-  counterId: number;
-  type: CounterType;
-  value: number;
-}
 
 interface GameState {
   players: Player[];
